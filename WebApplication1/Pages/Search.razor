@@ -1,0 +1,43 @@
+@page "/Search"
+@using WebApplication1.Data
+@using Models
+
+<h1>Search</h1>
+
+@code {
+    private Person _person = new Person();
+}
+
+<div id="sousuo" style="text-align: center">
+    <form class="chaxun">
+        <span><input style="width:400px; height: 50px;" type="text"; placeholder="Entertext"></span>
+        <span><input style="width: 70px; height: 50px;text-align: center" type="submit" value="Search";></span>
+    </form>
+</div>
+
+<table class="table" style="margin-top: 50px">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>HairColor</th>
+        <th>EyeColor</th>
+        <th>Age</th>
+        <th>Weight</th>
+        <th>Height</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>@_person.Id</td>
+        <td>@_person.FirstName</td>
+        <td>@_person.LastName</td>
+        <td>@_person.HairColor</td>
+        <td>@_person.EyeColor</td>
+        <td>@_person.Age</td>
+        <td>@_person.Weight</td>
+        <td>@_person.Height</td>
+    </tr>
+    </tbody>
+</table>
